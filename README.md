@@ -40,15 +40,11 @@ This project is a **real-time Ransomware Detection System** that prevents malici
 ---
 
 
----
-
 ## Future Enhancements
 
 - Replace the ML model with advanced deep learning models for better detection accuracy.
 - Extend monitoring capabilities to support multiple directories.
 - Implement email or SMS alerts for real-time user notifications.
-
----
 
 ---
 
