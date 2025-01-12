@@ -39,13 +39,6 @@ This project is a **real-time Ransomware Detection System** that prevents malici
 
 ---
 
-## Screenshots
-
-### Dashboard Overview
-*Add a screenshot of your real-time monitoring dashboard here.*
-
-### Detection in Action
-*Add a screenshot of ransomware detection and logging here.*
 
 ---
 
@@ -57,15 +50,11 @@ This project is a **real-time Ransomware Detection System** that prevents malici
 
 ---
 
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request for any new features or bug fixes.
-
 ---
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the MIT License
 
 ---
 
