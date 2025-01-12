@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ransomware Detection Dashboard</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ransomware Detection Dashboard</h1>
+    <table id="logTable">
+        <thead>
+            <tr>
+                <th>Timestamp</th>
+                <th>Filename</th>
+                <th>Activity</th>
+                <th>Entropy</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        async function fetchLogs() {
+            try {
+                const response = await fetch('/logs');
+                const logs = await response.json();
+                const tableBody = document.querySelector("#logTable tbody");
+                tableBody.innerHTML = ""; // Clear the table before updating
+
+                logs.forEach(log => {
+    const row = document.createElement("tr");
+    for (const key in log) {
+        const values = log[key].toString().split(','); // Split the data by commas
+        values.forEach(value => {
+            const cell = document.createElement("td");
+            cell.textContent = value.trim(); // Trim to remove any extra spaces
+            row.appendChild(cell);
+        });
+    }
+    tableBody.appendChild(row);
+});
+
+            } catch (error) {
+                console.error("Error fetching logs:", error);
+            }
+        }
+
+        // Fetch logs every second
+        setInterval(fetchLogs, 1000);
+    </script>
+</body>
+</html>
