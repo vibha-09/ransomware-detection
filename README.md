@@ -1,14 +1,27 @@
-Ransomware Detection and Dashboard
-This project detects ransomware activities in real time and displays results on a web dashboard. It simulates ransomware behavior (file renaming and encryption) for testing purposes.
+# Library Management System
 
-Features
-Real-time ransomware detection based on file changes (created, deleted, encrypted).
-Web-based dashboard to view file activities.
-Logging of suspicious activities (e.g., file renaming, creation, deletion).
-Simulated ransomware behavior (for testing).
+This project is an efficient **Library Management System** designed to simplify the management of books. Built using **Python Flask** for the front end and **SQLite** for the back end, it provides a clean, user-friendly interface for performing library operations.
 
-Requirements
-Python 3.x
-Flask
-Cryptography
+---
 
+## Key Features
+
+### 1. Add Books
+- Easily add new books to the library database.
+- Inputs include key details such as:
+  - Title
+  - Author
+  - Genre
+
+### 2. Delete Books
+- Remove books from the library system using a unique identifier (e.g., Book ID or ISBN).
+- Ensures seamless removal without affecting database integrity.
+
+---
+
+## How to Run
+
+1. Clone this repository:
+   ```bash
+   git clone <repository-link>
+   cd library-management-system
